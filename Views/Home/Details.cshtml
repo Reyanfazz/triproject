@@ -1,0 +1,78 @@
+﻿@model certificate.Models.studentmodel
+
+@{
+    ViewData["Title"] = "StudentDetails";
+}
+
+<h1>StudentDetails</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayName("Student ID")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SId)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayName("Student Name")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SName)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayName("Gender")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sgender)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayName("Date of Birth")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sdob)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Mobile Number")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.mobileNo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Email")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SEmail)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Address")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SAddress)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Course")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Scourse)
+        </dd>
+
+    </dl>
+
+    <dl class="row">
+        <center>
+        <dt class="col-sm-2">
+                @Html.DisplayName("Certificate")
+        </dt>
+         </center>
+         <dd class="col-sm-10">
+             <img src="data:image/png;base64,@Model.Scertificate" alt="Certificate Image" style="width:1300px; height:1200px" />
+
+
+          </dd>
+
+    </dl>

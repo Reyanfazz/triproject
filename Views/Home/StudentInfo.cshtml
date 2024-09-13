@@ -1,0 +1,71 @@
+﻿@model IEnumerable<certificate.Models.student>
+
+@{
+    Layout = "_Layout2";
+    ViewData["Title"] = "studentInfo";
+}
+
+<h1>Student Information</h1>
+
+<p>
+    <a asp-action="addstudents">Add new student</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Student Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Date of Birth
+            </th>
+            <th>
+                Mobile Number
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Address
+            </th>
+            <th>
+                Internship On
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sdob)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.mobileNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SEmail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SAddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Scourse) 
+                </td>
+            </tr>
+
+        }
+
+    </tbody>
+</table>

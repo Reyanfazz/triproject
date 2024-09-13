@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "Contact";
+    Layout = "~/Views/Shared/_Layout_index.cshtml";
+}
+
+<div class="contact_info">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+                <div class="contact_info_container d-flex flex-lg-row flex-column justify-content-between align-items-between">
+
+                    <!-- Contact Item -->
+                    <div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
+                        <div class="contact_info_image"><img src="https://img.icons8.com/office/24/000000/iphone.png" alt="Phone icon"></div>
+                        <div class="contact_info_content">
+                            <div class="contact_info_title">Phone</div>
+                            <div class="contact_info_text">(824)-769-2377</div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Item -->
+                    <div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
+                        <div class="contact_info_image"><img src="https://img.icons8.com/ultraviolet/24/000000/filled-message.png" alt="Email icon"></div>
+                        <div class="contact_info_content">
+                            <div class="contact_info_title">Email</div>
+                            <div class="contact_info_text"><a href="mailto:tritcontact@gmail.com">tritcontact@gmail.com</a></div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Item -->
+                    <div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
+                        <div class="contact_info_image"><img src="https://img.icons8.com/ultraviolet/24/000000/map-marker.png" alt="Location icon"></div>
+                        <div class="contact_info_content">
+                            <div class="contact_info_title">Address</div>
+                            <div class="contact_info_text">Jönköping, Sweden</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Form -->
+<div class="contact_form">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+                <div class="contact_form_container">
+                    <div class="contact_form_title">Get in Touch</div>
+
+                    <form action="@Url.Action("SendMessage", "Home")" id="contact_form" method="post" class="needs-validation" novalidate>
+                        <div class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
+                            <input type="text" name="contact_form_name" id="contact_form_name" class="contact_form_name input_field" placeholder="Your name" required>
+                            <input type="email" name="contact_form_email" id="contact_form_email" class="contact_form_email input_field" placeholder="Your email" required>
+                            <input type="tel" name="contact_form_phone" id="contact_form_phone" class="contact_form_phone input_field" placeholder="Your phone number">
+                        </div>
+                        <div class="contact_form_text">
+                            <textarea id="contact_form_message" name="contact_form_message" class="text_field contact_form_message" rows="4" placeholder="Message" required></textarea>
+                        </div>
+                        <div class="contact_form_button">
+                            <button type="submit" class="button contact_submit_button">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@ViewBag.ErrorMessage
+<div class="panel"></div>

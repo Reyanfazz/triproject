@@ -1,0 +1,94 @@
+﻿@model certificate.Models.studentmodel
+
+@{
+   // Layout = "_Layout2";
+    ViewData["Title"] = "StudentDetails";
+}
+
+<h1>StudentDetails</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayName("Student ID")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SId)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayName("Student Name")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Date of Birth")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sdob)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Date of Birth")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sdob)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Mobile Number")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.mobileNo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Email")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SEmail)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Address")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SAddress)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Course")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Scourse)
+        </dd>
+        
+    </dl>
+
+    <dl class="row">
+        <center>
+        <dt class="col-sm-2">
+                @Html.DisplayName("Certificate")
+        </dt>
+       <!-- </center>
+        <dd class="col-sm-10">
+            <img src="data:image/png;base64,@Model.Scertificate" alt="Certificate Image" style="width:1300px; height:1200px" />
+
+
+         </dd>-->
+      
+    </dl>
+
+    <div id="certificate">
+        <img src="/src/trilogo.png" class="LOGO__crit" />
+        <h1 class="ceri__inter"><b><u>INTERNSHIP CERTIFICATE</u></b></h1><br />
+        
+        <h4 >This is to certify that</h4>
+        <h2 class="certif__name" id="name"><b>@Html.DisplayFor(model => model.SName)</b></h2><br/>
+        <p class="cerp">has successfully completed the <b>3 - Months Internship Program</b> at <b>THE RIGHT IT SOLUTIONS.</b><br>During this period, He demonstrated a high level of commitment, enthusiasm, and professionalism.</p>
+        <h3 class="course__name">@Html.DisplayFor(model => model.Scourse)</h3>
+        <br>
+        <h3 class="company_titel">THE RIGHT IT SOFTWARE SOLUTIONS</h3>
+        <p id="certificate__contact">Contact us: <span>tritcontact@gmail.com</span></p>
+        <img src="/src/signImg.png" class="singature__ceo" />
+        <p class="tit__ceo">ASMA JOHANSSON, CEO</p>
+    </div>
+
+</div>
